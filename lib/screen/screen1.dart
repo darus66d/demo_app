@@ -6,7 +6,8 @@ class Screen1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     endDrawer:  Drawer(
+
+     drawer:  Drawer(
        child:
          Column(
            children:[
@@ -29,17 +30,39 @@ class Screen1 extends StatelessWidget {
              ],
              ),
              ),
+             Column(
+               children: [
+                 Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Container(
+                     padding: EdgeInsets.all(8.0),
+                     margin: EdgeInsets.all(8.0),
+                     decoration: BoxDecoration(
+                       color: Colors.white,
+                       borderRadius: BorderRadius.circular(8),
+                       boxShadow: [
+                         BoxShadow(
+                           color: Colors.grey.withOpacity(0.8), // Shadow color
+                           spreadRadius: 3, // Spread radius
+                           blurRadius: 10, // Blur radius
+                           offset: Offset(4, 4), // Shadow position (x, y)
+                         ),
+                       ],
+                     ),
+                       child: Text("Flutter is an open source framework developed and supported by Google. Frontend and full-stack developers use Flutter to build an application’s user interface (UI) for multiple platforms with a single codebaseWhen Flutter launched in 2018 it mainly supported mobile app development. Flutter now supports application development on six platforms: iOS, Android, the web, Windows, MacOS, and Linux.")),
+                 ),
+               ],
+             )
            ],
          ),
        ),
-
-       //[Text("Darus Salam")],
-      // Text("Stamford University Bangladesh"),
-
+      drawerScrimColor: Colors.black,
 
       appBar: AppBar(
         backgroundColor: Colors.green,
+        title: Text("Assignment1"),
       ),
+
       );
   }
 }
